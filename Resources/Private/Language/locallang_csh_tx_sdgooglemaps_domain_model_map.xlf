@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2017-03-28T10:24:03Z" product-name="sd_googlemaps">
+		<header/>
+		<body>
+			<trans-unit id="center.description">
+				<source>center</source>
+			</trans-unit>
+			<trans-unit id="markers.description">
+				<source>markers</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

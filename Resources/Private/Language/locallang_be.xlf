@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2017-03-28T06:32:05Z" product-name="sd_googlemaps">
+		<header/>
+		<body>
+			<trans-unit id="flexforms_tab.settings">
+				<source>Settings</source>
+			</trans-unit>
+			<trans-unit id="flexforms_general.map">
+				<source>Map</source>
+			</trans-unit>
+
+			<trans-unit id="wizards.gm_plugin">
+				<source>Google Maps</source>
+			</trans-unit>
+			<trans-unit id="wizards.gm_plugin.description">
+				<source>Adds a Google Maps Plugin with configured markers</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

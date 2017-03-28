@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2017-03-28T10:24:03Z" product-name="sd_googlemaps">
+		<header/>
+		<body>
+			<trans-unit id="tx_sdgooglemaps_domain_model_marker">
+				<source>Marker</source>
+			</trans-unit>
+			<trans-unit id="tx_sdgooglemaps_domain_model_marker.title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tx_sdgooglemaps_domain_model_marker.bodytext">
+				<source>Bodytext</source>
+			</trans-unit>
+			<trans-unit id="tx_sdgooglemaps_domain_model_marker.icon">
+				<source>Icon</source>
+			</trans-unit>
+			<trans-unit id="tx_sdgooglemaps_domain_model_marker.position">
+				<source>Position</source>
+			</trans-unit>
+			<trans-unit id="tx_sdgooglemaps_domain_model_map">
+				<source>Map</source>
+			</trans-unit>
+			<trans-unit id="tx_sdgooglemaps_domain_model_map.center">
+				<source>Center</source>
+			</trans-unit>
+			<trans-unit id="tx_sdgooglemaps_domain_model_map.markers">
+				<source>Markers</source>
+			</trans-unit>
+			<trans-unit id="tx_sdgooglemaps_domain_model_coordinate">
+				<source>Coordinate</source>
+			</trans-unit>
+			<trans-unit id="tx_sdgooglemaps_domain_model_coordinate.latitude">
+				<source>Latitude</source>
+			</trans-unit>
+			<trans-unit id="tx_sdgooglemaps_domain_model_coordinate.longitude">
+				<source>Longitude</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

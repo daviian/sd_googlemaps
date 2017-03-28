@@ -1,0 +1,31 @@
+<T3DataStructure>
+    <sheets>
+        <sDEF>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>LLL:EXT:sd_googlemaps/Resources/Private/Language/locallang_be.xlf:flexforms_tab.settings</sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el>
+                    <settings.map>
+                        <TCEforms>
+                            <label>LLL:EXT:sd_googlemaps/Resources/Private/Language/locallang_be.xlf:flexforms_general.map</label>
+                            <config>
+                                <type>inline</type>
+                                <foreign_table>tx_sdgooglemaps_domain_model_map</foreign_table>
+                                <minitems>1</minitems>
+                                <maxitems>1</maxitems>
+                                <appearance>
+                                    <collapseAll>1</collapseAll>
+                                    <expandSingle>1</expandSingle>
+                                    <newRecordLinkAddTitle>1</newRecordLinkAddTitle>
+      						                  <levelLinksPosition>bottom</levelLinksPosition>
+                                </appearance>
+                            </config>
+                        </TCEforms>
+                    </settings.map>
+                </el>
+            </ROOT>
+        </sDEF>
+    </sheets>
+</T3DataStructure>
