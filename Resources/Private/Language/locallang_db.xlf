@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" date="2017-03-28T10:24:03Z" product-name="sd_googlemaps">
+	<file source-language="en" datatype="plaintext" original="messages" date="2017-03-29T13:17:11Z" product-name="sd_googlemaps">
 		<header/>
 		<body>
 			<trans-unit id="tx_sdgooglemaps_domain_model_marker">
@@ -20,6 +20,15 @@
 			</trans-unit>
 			<trans-unit id="tx_sdgooglemaps_domain_model_map">
 				<source>Map</source>
+			</trans-unit>
+			<trans-unit id="tx_sdgooglemaps_domain_model_map.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_sdgooglemaps_domain_model_map.custom_centered">
+				<source>Custom Centered</source>
+			</trans-unit>
+			<trans-unit id="tx_sdgooglemaps_domain_model_map.zoom">
+				<source>Zoom / Max Zoom</source>
 			</trans-unit>
 			<trans-unit id="tx_sdgooglemaps_domain_model_map.center">
 				<source>Center</source>

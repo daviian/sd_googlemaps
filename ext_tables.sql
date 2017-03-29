@@ -51,6 +51,8 @@ CREATE TABLE tx_sdgooglemaps_domain_model_map (
 	uid int(11) NOT NULL auto_increment,
 	pid int(11) DEFAULT '0' NOT NULL,
 
+	name varchar(255) DEFAULT '' NOT NULL,
+	zoom int(11) DEFAULT '0' NOT NULL,
 	center int(11) unsigned DEFAULT '0',
 	markers int(11) unsigned DEFAULT '0' NOT NULL,
 
@@ -92,8 +94,8 @@ CREATE TABLE tx_sdgooglemaps_domain_model_coordinate (
 	uid int(11) NOT NULL auto_increment,
 	pid int(11) DEFAULT '0' NOT NULL,
 
-	latitude double(11,2) DEFAULT '0.00' NOT NULL,
-	longitude double(11,2) DEFAULT '0.00' NOT NULL,
+	latitude double(11,7) DEFAULT '0.0000000' NOT NULL,
+	longitude double(11,7) DEFAULT '0.0000000' NOT NULL,
 
 	tstamp int(11) unsigned DEFAULT '0' NOT NULL,
 	crdate int(11) unsigned DEFAULT '0' NOT NULL,

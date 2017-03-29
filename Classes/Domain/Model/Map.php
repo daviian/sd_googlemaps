@@ -15,8 +15,23 @@ namespace SD\SdGooglemaps\Domain\Model;
 /**
  * Map
  */
-class Map extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
+class Map extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity implements \JsonSerializable
 {
+    /**
+     * name
+     *
+     * @var string
+     * @validate NotEmpty
+     */
+    protected $name = '';
+
+    /**
+     * zoom
+     *
+     * @var integer
+     */
+    protected $zoom = 0;
+
     /**
      * center
      *
@@ -55,6 +70,39 @@ class Map extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     }
 
     /**
+     * Serialization of object
+     */
+    public function jsonSerialize()
+    {
+        return [
+            'center' => $this->center,
+            'zoom' => $this->zoom,
+            'maxZoom' => $this->zoom
+        ];
+    }
+
+    /**
+     * Returns the name
+     *
+     * @return string $name
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    /**
+     * Sets the name
+     *
+     * @param string $name
+     * @return void
+     */
+    public function setName($name)
+    {
+        $this->name = $name;
+    }
+
+    /**
      * Returns the center
      *
      * @return \SD\SdGooglemaps\Domain\Model\Coordinate $center
@@ -73,6 +121,27 @@ class Map extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     public function setCenter(\SD\SdGooglemaps\Domain\Model\Coordinate $center)
     {
         $this->center = $center;
+    }
+
+    /**
+     * Returns the zoom
+     *
+     * @return integer $zoom
+     */
+    public function getZoom()
+    {
+        return $this->zoom;
+    }
+
+    /**
+     * Sets the zoom
+     *
+     * @param integer $zoom
+     * @return void
+     */
+    public function setZoom($zoom)
+    {
+        $this->zoom = $zoom;
     }
 
     /**

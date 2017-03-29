@@ -27,6 +27,74 @@ class MapTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
     /**
      * @test
      */
+    public function getNameReturnsInitialValueForString()
+    {
+        self::assertSame(
+            '',
+            $this->subject->getName()
+        );
+
+    }
+
+    /**
+     * @test
+     */
+    public function setNameForStringSetsName()
+    {
+        $this->subject->setName('Conceived at T3CON10');
+
+        self::assertAttributeEquals(
+            'Conceived at T3CON10',
+            'name',
+            $this->subject
+        );
+
+    }
+
+    /**
+     * @test
+     */
+    public function getCustomCenteredReturnsInitialValueForBool()
+    {
+        self::assertSame(
+            false,
+            $this->subject->getCustomCentered()
+        );
+
+    }
+
+    /**
+     * @test
+     */
+    public function setCustomCenteredForBoolSetsCustomCentered()
+    {
+        $this->subject->setCustomCentered(true);
+
+        self::assertAttributeEquals(
+            true,
+            'customCentered',
+            $this->subject
+        );
+
+    }
+
+    /**
+     * @test
+     */
+    public function getZoomReturnsInitialValueForInt()
+    {
+    }
+
+    /**
+     * @test
+     */
+    public function setZoomForIntSetsZoom()
+    {
+    }
+
+    /**
+     * @test
+     */
     public function getCenterReturnsInitialValueForCoordinate()
     {
         self::assertEquals(

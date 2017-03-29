@@ -15,7 +15,7 @@ namespace SD\SdGooglemaps\Domain\Model;
 /**
  * Coordinate
  */
-class Coordinate extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
+class Coordinate extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity implements \JsonSerializable
 {
     /**
      * Latitude of coordinate
@@ -32,6 +32,17 @@ class Coordinate extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * @validate NotEmpty
      */
     protected $longitude = 0.0;
+
+    /**
+     * Serialization of object
+     */
+    public function jsonSerialize()
+    {
+        return [
+            'lat' => $this->latitude,
+            'lng' => $this->longitude
+        ];
+    }
 
     /**
      * Returns the latitude

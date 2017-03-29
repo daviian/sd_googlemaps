@@ -16,6 +16,10 @@
 			<trans-unit id="wizards.gm_plugin.description">
 				<source>Adds a Google Maps Plugin with configured markers</source>
 			</trans-unit>
+
+			<trans-unit id="palette.center">
+				<source>Center</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

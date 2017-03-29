@@ -3,8 +3,8 @@
         {
             "config": {
                 "position": [
-                    510,
-                    328
+                    507,
+                    330
                 ]
             },
             "name": "New Model Object",
@@ -73,7 +73,7 @@
                             "propertyIsExcludeField": true,
                             "relationDescription": "",
                             "relationName": "position",
-                            "relationType": "zeroToOne",
+                            "relationType": "manyToOne",
                             "relationWire": "[wired]",
                             "renderType": "selectSingle",
                             "uid": "1039500392191"
@@ -114,7 +114,28 @@
                     "uid": "1285171790906"
                 },
                 "propertyGroup": {
-                    "properties": []
+                    "properties": [
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": true,
+                            "propertyName": "name",
+                            "propertyType": "String",
+                            "uid": "808230856451"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "zoom",
+                            "propertyType": "Integer",
+                            "uid": "326107225843"
+                        }
+                    ]
                 },
                 "relationGroup": {
                     "relations": [
@@ -124,7 +145,7 @@
                             "propertyIsExcludeField": true,
                             "relationDescription": "",
                             "relationName": "center",
-                            "relationType": "zeroToOne",
+                            "relationType": "manyToOne",
                             "relationWire": "[wired]",
                             "renderType": "selectSingle",
                             "uid": "420498774253"
@@ -284,7 +305,7 @@
         }
     ],
     "log": {
-        "last_modified": "2017-03-28 10:24",
+        "last_modified": "2017-03-29 01:17",
         "extension_builder_version": "8.6.0",
         "be_user": " (1)"
     }

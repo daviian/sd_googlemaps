@@ -2,7 +2,7 @@
 return [
     'ctrl' => [
         'title' => 'LLL:EXT:sd_googlemaps/Resources/Private/Language/locallang_db.xlf:tx_sdgooglemaps_domain_model_map',
-        'label' => 'center',
+        'label' => 'name',
         'tstamp' => 'tstamp',
         'crdate' => 'crdate',
         'cruser_id' => 'cruser_id',
@@ -16,14 +16,14 @@ return [
             'starttime' => 'starttime',
             'endtime' => 'endtime',
         ],
-        'searchFields' => 'center,markers',
+        'searchFields' => 'center,zoom,markers',
         'iconfile' => 'EXT:sd_googlemaps/Resources/Public/Icons/tx_sdgooglemaps_domain_model_map.gif'
     ],
     'interface' => [
-        'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, center, markers',
+        'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, name, zoom, center, markers',
     ],
     'types' => [
-        '1' => ['showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, center, markers, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime'],
+        '1' => ['showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, name, zoom, center, markers, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime'],
     ],
     'columns' => [
         'sys_language_uid' => [
@@ -84,10 +84,13 @@ return [
         ],
         'starttime' => [
             'exclude' => true,
-            'l10n_mode' => 'mergeIfNotBlank',
+            'behavior' => [
+                'allowLanguageSynchronization' => true,
+            ],
             'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.starttime',
             'config' => [
                 'type' => 'input',
+                'renderType' => 'inputDateTime',
                 'size' => 13,
                 'eval' => 'datetime',
                 'default' => 0,
@@ -95,10 +98,13 @@ return [
         ],
         'endtime' => [
             'exclude' => true,
-            'l10n_mode' => 'mergeIfNotBlank',
+            'behavior' => [
+                'allowLanguageSynchronization' => true,
+            ],
             'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.endtime',
             'config' => [
                 'type' => 'input',
+                'renderType' => 'inputDateTime',
                 'size' => 13,
                 'eval' => 'datetime',
                 'default' => 0,
@@ -108,41 +114,95 @@ return [
             ],
         ],
 
+        'name' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:sd_googlemaps/Resources/Private/Language/locallang_db.xlf:tx_sdgooglemaps_domain_model_map.name',
+            'config' => [
+                'type' => 'input',
+                'size' => 30,
+                'eval' => 'trim,required'
+            ],
+        ],
+        'zoom' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:sd_googlemaps/Resources/Private/Language/locallang_db.xlf:tx_sdgooglemaps_domain_model_map.zoom',
+            'config' => [
+                'type' => 'input',
+                'size' => 4,
+                'eval' => 'trim,int,required',
+                'range' => [
+                    'lower' => 0,
+                    'upper' => 20,
+                ],
+                'default' => 0,
+                'slider' => [
+                    'step' => 1,
+                    'width' => 200,
+                ],
+            ]
+        ],
         'center' => [
             'exclude' => true,
             'label' => 'LLL:EXT:sd_googlemaps/Resources/Private/Language/locallang_db.xlf:tx_sdgooglemaps_domain_model_map.center',
+            'onChange' => 'reload',
             'config' => [
-                'type' => 'inline',
-                'foreign_table' => 'tx_sdgooglemaps_domain_model_coordinate',
+                'type' => 'group',
+                'internal_type' => 'db',
+                'allowed' => 'tx_sdgooglemaps_domain_model_coordinate',
+                'size' => 1,
                 'minitems' => 0,
                 'maxitems' => 1,
-                'appearance' => [
-                    'collapseAll' => 0,
-                    'levelLinksPosition' => 'top',
-                    'showSynchronizationLink' => 1,
-                    'showPossibleLocalizationRecords' => 1,
-                    'showAllLocalizationLink' => 1
+                'fieldControl' => [
+                    'addRecord' => [
+                        'disabled' => false,
+                        'pid' => '###CURRENT_PID###',
+                        'table' => 'tx_sdgooglemaps_domain_model_coordinate',
+                        'setValue' => 'set'
+                    ],
+                    'listModule' => [
+                        'disabled' => false
+                    ]
                 ],
+                'fieldWizard' => [
+                    'recordsOverview' => [
+                        'disabled' => true
+                    ],
+                    'tableList' => [
+                        'disabled' => true
+                    ]
+                ]
             ],
         ],
         'markers' => [
             'exclude' => true,
             'label' => 'LLL:EXT:sd_googlemaps/Resources/Private/Language/locallang_db.xlf:tx_sdgooglemaps_domain_model_map.markers',
             'config' => [
-                'type' => 'inline',
-                'foreign_table' => 'tx_sdgooglemaps_domain_model_marker',
-                'foreign_field' => 'map',
+                'type' => 'group',
+                'internal_type' => 'db',
+                'allowed' => 'tx_sdgooglemaps_domain_model_marker',
                 'maxitems' => 9999,
-                'appearance' => [
-                    'collapseAll' => 0,
-                    'levelLinksPosition' => 'top',
-                    'showSynchronizationLink' => 1,
-                    'showPossibleLocalizationRecords' => 1,
-                    'showAllLocalizationLink' => 1
+                'fieldControl' => [
+                    'addRecord' => [
+                        'disabled' => false,
+                        'pid' => '###CURRENT_PID###',
+                        'table' => 'tx_sdgooglemaps_domain_model_coordinate',
+                        'setValue' => 'set'
+                    ],
+                    'listModule' => [
+                        'disabled' => false
+                    ]
                 ],
+                'fieldWizard' => [
+                    'recordsOverview' => [
+                        'disabled' => true
+                    ],
+                    'tableList' => [
+                        'disabled' => true
+                    ]
+                ]
             ],
 
         ],
-    
+
     ],
 ];

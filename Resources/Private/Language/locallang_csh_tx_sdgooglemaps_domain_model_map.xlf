@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" date="2017-03-28T10:24:03Z" product-name="sd_googlemaps">
+	<file source-language="en" datatype="plaintext" original="messages" date="2017-03-29T13:17:11Z" product-name="sd_googlemaps">
 		<header/>
 		<body>
+			<trans-unit id="zoom.description">
+				<source>Zoom Level of map. If center of map is calculated automatically it is used as a max zoom level.</source>
+			</trans-unit>
 			<trans-unit id="center.description">
-				<source>center</source>
+				<source>Position of map, which should be centered.</source>
 			</trans-unit>
 			<trans-unit id="markers.description">
-				<source>markers</source>
+				<source>Defined markers, which are shown on map. Used to calculate center position and zoom level if no center position is given.</source>
 			</trans-unit>
 		</body>
 	</file>

@@ -3,6 +3,8 @@ return [
     'ctrl' => [
         'title' => 'LLL:EXT:sd_googlemaps/Resources/Private/Language/locallang_db.xlf:tx_sdgooglemaps_domain_model_coordinate',
         'label' => 'latitude',
+        'label_alt' => 'longitude',
+        'label_alt_force' => 1,
         'tstamp' => 'tstamp',
         'crdate' => 'crdate',
         'cruser_id' => 'cruser_id',
@@ -84,10 +86,13 @@ return [
         ],
         'starttime' => [
             'exclude' => true,
-            'l10n_mode' => 'mergeIfNotBlank',
+            'behavior' => [
+                'allowLanguageSynchronization' => true,
+            ],
             'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.starttime',
             'config' => [
                 'type' => 'input',
+                'renderType' => 'inputDateTime',
                 'size' => 13,
                 'eval' => 'datetime',
                 'default' => 0,
@@ -95,10 +100,13 @@ return [
         ],
         'endtime' => [
             'exclude' => true,
-            'l10n_mode' => 'mergeIfNotBlank',
+            'behavior' => [
+                'allowLanguageSynchronization' => true,
+            ],
             'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.endtime',
             'config' => [
                 'type' => 'input',
+                'renderType' => 'inputDateTime',
                 'size' => 13,
                 'eval' => 'datetime',
                 'default' => 0,
@@ -114,7 +122,7 @@ return [
             'config' => [
                 'type' => 'input',
                 'size' => 30,
-                'eval' => 'double2,required'
+                'eval' => 'required'
             ]
         ],
         'longitude' => [
@@ -123,9 +131,9 @@ return [
             'config' => [
                 'type' => 'input',
                 'size' => 30,
-                'eval' => 'double2,required'
+                'eval' => 'required'
             ]
         ],
-    
+
     ],
 ];

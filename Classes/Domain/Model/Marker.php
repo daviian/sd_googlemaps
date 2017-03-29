@@ -15,7 +15,7 @@ namespace SD\SdGooglemaps\Domain\Model;
 /**
  * Marker
  */
-class Marker extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
+class Marker extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity implements \JsonSerializable
 {
     /**
      * title
@@ -38,7 +38,7 @@ class Marker extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * @var \TYPO3\CMS\Extbase\Domain\Model\FileReference
      * @cascade remove
      */
-    protected $icon = '';
+    protected $icon = null;
 
     /**
      * position
@@ -46,6 +46,19 @@ class Marker extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * @var \SD\SdGooglemaps\Domain\Model\Coordinate
      */
     protected $position = null;
+
+    /**
+     * Serialization of object
+     */
+    public function jsonSerialize()
+    {
+        return [
+            'title' => $this->title,
+            'bodytext' => $this->bodytext,
+            'icon' => $this->icon ? $this->icon->getPublicUrl() : '',
+            'position' => $this->position
+        ];
+    }
 
     /**
      * Returns the title
