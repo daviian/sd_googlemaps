@@ -54,33 +54,6 @@ class MapTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
     /**
      * @test
      */
-    public function getCustomCenteredReturnsInitialValueForBool()
-    {
-        self::assertSame(
-            false,
-            $this->subject->getCustomCentered()
-        );
-
-    }
-
-    /**
-     * @test
-     */
-    public function setCustomCenteredForBoolSetsCustomCentered()
-    {
-        $this->subject->setCustomCentered(true);
-
-        self::assertAttributeEquals(
-            true,
-            'customCentered',
-            $this->subject
-        );
-
-    }
-
-    /**
-     * @test
-     */
     public function getZoomReturnsInitialValueForInt()
     {
     }
@@ -90,6 +63,141 @@ class MapTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
      */
     public function setZoomForIntSetsZoom()
     {
+    }
+
+    /**
+     * @test
+     */
+    public function getMapTypeReturnsInitialValueForString()
+    {
+        self::assertSame(
+            '',
+            $this->subject->getMapType()
+        );
+
+    }
+
+    /**
+     * @test
+     */
+    public function setMapTypeForStringSetsMapType()
+    {
+        $this->subject->setMapType('Conceived at T3CON10');
+
+        self::assertAttributeEquals(
+            'Conceived at T3CON10',
+            'mapType',
+            $this->subject
+        );
+
+    }
+
+    /**
+     * @test
+     */
+    public function getDisableDoubleClickZoomReturnsInitialValueForBool()
+    {
+        self::assertSame(
+            false,
+            $this->subject->getDisableDoubleClickZoom()
+        );
+
+    }
+
+    /**
+     * @test
+     */
+    public function setDisableDoubleClickZoomForBoolSetsDisableDoubleClickZoom()
+    {
+        $this->subject->setDisableDoubleClickZoom(true);
+
+        self::assertAttributeEquals(
+            true,
+            'disableDoubleClickZoom',
+            $this->subject
+        );
+
+    }
+
+    /**
+     * @test
+     */
+    public function getDraggableReturnsInitialValueForBool()
+    {
+        self::assertSame(
+            false,
+            $this->subject->getDraggable()
+        );
+
+    }
+
+    /**
+     * @test
+     */
+    public function setDraggableForBoolSetsDraggable()
+    {
+        $this->subject->setDraggable(true);
+
+        self::assertAttributeEquals(
+            true,
+            'draggable',
+            $this->subject
+        );
+
+    }
+
+    /**
+     * @test
+     */
+    public function getScrollwheelReturnsInitialValueForBool()
+    {
+        self::assertSame(
+            false,
+            $this->subject->getScrollwheel()
+        );
+
+    }
+
+    /**
+     * @test
+     */
+    public function setScrollwheelForBoolSetsScrollwheel()
+    {
+        $this->subject->setScrollwheel(true);
+
+        self::assertAttributeEquals(
+            true,
+            'scrollwheel',
+            $this->subject
+        );
+
+    }
+
+    /**
+     * @test
+     */
+    public function getStreetViewControlReturnsInitialValueForBool()
+    {
+        self::assertSame(
+            false,
+            $this->subject->getStreetViewControl()
+        );
+
+    }
+
+    /**
+     * @test
+     */
+    public function setStreetViewControlForBoolSetsStreetViewControl()
+    {
+        $this->subject->setStreetViewControl(true);
+
+        self::assertAttributeEquals(
+            true,
+            'streetViewControl',
+            $this->subject
+        );
+
     }
 
     /**
@@ -183,6 +291,72 @@ class MapTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
         $this->inject($this->subject, 'markers', $markersObjectStorageMock);
 
         $this->subject->removeMarker($marker);
+
+    }
+
+    /**
+     * @test
+     */
+    public function getStylesReturnsInitialValueForStyle()
+    {
+        $newObjectStorage = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+        self::assertEquals(
+            $newObjectStorage,
+            $this->subject->getStyles()
+        );
+
+    }
+
+    /**
+     * @test
+     */
+    public function setStylesForObjectStorageContainingStyleSetsStyles()
+    {
+        $style = new \SD\SdGooglemaps\Domain\Model\Style();
+        $objectStorageHoldingExactlyOneStyles = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+        $objectStorageHoldingExactlyOneStyles->attach($style);
+        $this->subject->setStyles($objectStorageHoldingExactlyOneStyles);
+
+        self::assertAttributeEquals(
+            $objectStorageHoldingExactlyOneStyles,
+            'styles',
+            $this->subject
+        );
+
+    }
+
+    /**
+     * @test
+     */
+    public function addStyleToObjectStorageHoldingStyles()
+    {
+        $style = new \SD\SdGooglemaps\Domain\Model\Style();
+        $stylesObjectStorageMock = $this->getMockBuilder(\TYPO3\CMS\Extbase\Persistence\ObjectStorage::class)
+            ->setMethods(['attach'])
+            ->disableOriginalConstructor()
+            ->getMock();
+
+        $stylesObjectStorageMock->expects(self::once())->method('attach')->with(self::equalTo($style));
+        $this->inject($this->subject, 'styles', $stylesObjectStorageMock);
+
+        $this->subject->addStyle($style);
+    }
+
+    /**
+     * @test
+     */
+    public function removeStyleFromObjectStorageHoldingStyles()
+    {
+        $style = new \SD\SdGooglemaps\Domain\Model\Style();
+        $stylesObjectStorageMock = $this->getMockBuilder(\TYPO3\CMS\Extbase\Persistence\ObjectStorage::class)
+            ->setMethods(['detach'])
+            ->disableOriginalConstructor()
+            ->getMock();
+
+        $stylesObjectStorageMock->expects(self::once())->method('detach')->with(self::equalTo($style));
+        $this->inject($this->subject, 'styles', $stylesObjectStorageMock);
+
+        $this->subject->removeStyle($style);
 
     }
 }

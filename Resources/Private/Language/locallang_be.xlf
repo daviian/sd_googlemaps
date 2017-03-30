@@ -17,8 +17,22 @@
 				<source>Adds a Google Maps Plugin with configured markers</source>
 			</trans-unit>
 
-			<trans-unit id="palette.center">
-				<source>Center</source>
+			<trans-unit id="palette.main_config">
+				<source></source>
+			</trans-unit>
+			<trans-unit id="palette.additional_config">
+				<source></source>
+			</trans-unit>
+
+			<trans-unit id="config.enable_styling">
+				<source>Enable Styling: Check the box to allow styling of maps via TCA. Otherwise style is set via TypoScript. Useful if agencies want to allow custom styling by the editors.</source>
+			</trans-unit>
+
+			<trans-unit id="constants.api_key">
+				<source>Google Maps API Key</source>
+			</trans-unit>
+			<trans-unit id="constants.library">
+				<source>Google Maps Library</source>
 			</trans-unit>
 		</body>
 	</file>

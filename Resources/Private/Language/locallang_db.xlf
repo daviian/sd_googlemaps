@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" date="2017-03-29T13:17:11Z" product-name="sd_googlemaps">
+	<file source-language="en" datatype="plaintext" original="messages" date="2017-03-29T17:04:32Z" product-name="sd_googlemaps">
 		<header/>
 		<body>
 			<trans-unit id="tx_sdgooglemaps_domain_model_marker">
@@ -24,17 +24,32 @@
 			<trans-unit id="tx_sdgooglemaps_domain_model_map.name">
 				<source>Name</source>
 			</trans-unit>
-			<trans-unit id="tx_sdgooglemaps_domain_model_map.custom_centered">
-				<source>Custom Centered</source>
-			</trans-unit>
 			<trans-unit id="tx_sdgooglemaps_domain_model_map.zoom">
 				<source>Zoom / Max Zoom</source>
+			</trans-unit>
+			<trans-unit id="tx_sdgooglemaps_domain_model_map.map_type">
+				<source>Map Type</source>
+			</trans-unit>
+			<trans-unit id="tx_sdgooglemaps_domain_model_map.disable_double_click_zoom">
+				<source>Disable Double Click Zoom</source>
+			</trans-unit>
+			<trans-unit id="tx_sdgooglemaps_domain_model_map.draggable">
+				<source>Draggable</source>
+			</trans-unit>
+			<trans-unit id="tx_sdgooglemaps_domain_model_map.scrollwheel">
+				<source>Scrollwheel</source>
+			</trans-unit>
+			<trans-unit id="tx_sdgooglemaps_domain_model_map.street_view_control">
+				<source>Street View Control</source>
 			</trans-unit>
 			<trans-unit id="tx_sdgooglemaps_domain_model_map.center">
 				<source>Center</source>
 			</trans-unit>
 			<trans-unit id="tx_sdgooglemaps_domain_model_map.markers">
 				<source>Markers</source>
+			</trans-unit>
+			<trans-unit id="tx_sdgooglemaps_domain_model_map.styles">
+				<source>Styles</source>
 			</trans-unit>
 			<trans-unit id="tx_sdgooglemaps_domain_model_coordinate">
 				<source>Coordinate</source>
@@ -44,6 +59,39 @@
 			</trans-unit>
 			<trans-unit id="tx_sdgooglemaps_domain_model_coordinate.longitude">
 				<source>Longitude</source>
+			</trans-unit>
+			<trans-unit id="tx_sdgooglemaps_domain_model_style">
+				<source>Style</source>
+			</trans-unit>
+			<trans-unit id="tx_sdgooglemaps_domain_model_style.feature_type">
+				<source>Feature Type</source>
+			</trans-unit>
+			<trans-unit id="tx_sdgooglemaps_domain_model_style.element_type">
+				<source>Element Type</source>
+			</trans-unit>
+			<trans-unit id="tx_sdgooglemaps_domain_model_style.stylers">
+				<source>Stylers</source>
+			</trans-unit>
+			<trans-unit id="tx_sdgooglemaps_domain_model_styler">
+				<source>Styler</source>
+			</trans-unit>
+			<trans-unit id="tx_sdgooglemaps_domain_model_styler.type">
+				<source>Type</source>
+			</trans-unit>
+			<trans-unit id="tx_sdgooglemaps_domain_model_styler.style_option">
+				<source>Style Option</source>
+			</trans-unit>
+			<trans-unit id="tx_sdgooglemaps_domain_model_styler.string_value">
+				<source>Value</source>
+			</trans-unit>
+			<trans-unit id="tx_sdgooglemaps_domain_model_styler.int_value">
+				<source>Value</source>
+			</trans-unit>
+			<trans-unit id="tx_sdgooglemaps_domain_model_styler.float_value">
+				<source>Value</source>
+			</trans-unit>
+			<trans-unit id="tx_sdgooglemaps_domain_model_styler.bool_value">
+				<source>Value</source>
 			</trans-unit>
 		</body>
 	</file>

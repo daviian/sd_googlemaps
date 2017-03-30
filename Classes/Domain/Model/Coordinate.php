@@ -17,72 +17,72 @@ namespace SD\SdGooglemaps\Domain\Model;
  */
 class Coordinate extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity implements \JsonSerializable
 {
-    /**
-     * Latitude of coordinate
-     *
-     * @var float
-     * @validate NotEmpty
-     */
-    protected $latitude = 0.0;
+	/**
+	 * Latitude of coordinate
+	 *
+	 * @var float
+	 * @validate NotEmpty
+	 */
+	protected $latitude = 0.0;
 
-    /**
-     * Longitude of coordinate
-     *
-     * @var float
-     * @validate NotEmpty
-     */
-    protected $longitude = 0.0;
+	/**
+	 * Longitude of coordinate
+	 *
+	 * @var float
+	 * @validate NotEmpty
+	 */
+	protected $longitude = 0.0;
 
-    /**
-     * Serialization of object
-     */
-    public function jsonSerialize()
-    {
-        return [
-            'lat' => $this->latitude,
-            'lng' => $this->longitude
-        ];
-    }
+	/**
+	 * Serialization of object
+	 */
+	public function jsonSerialize()
+	{
+		return [
+			'lat' => $this->latitude,
+			'lng' => $this->longitude
+		];
+	}
 
-    /**
-     * Returns the latitude
-     *
-     * @return float $latitude
-     */
-    public function getLatitude()
-    {
-        return $this->latitude;
-    }
+	/**
+	 * Returns the latitude
+	 *
+	 * @return float $latitude
+	 */
+	public function getLatitude()
+	{
+		return $this->latitude;
+	}
 
-    /**
-     * Sets the latitude
-     *
-     * @param float $latitude
-     * @return void
-     */
-    public function setLatitude($latitude)
-    {
-        $this->latitude = $latitude;
-    }
+	/**
+	 * Sets the latitude
+	 *
+	 * @param float $latitude
+	 * @return void
+	 */
+	public function setLatitude($latitude)
+	{
+		$this->latitude = $latitude;
+	}
 
-    /**
-     * Returns the longitude
-     *
-     * @return float $longitude
-     */
-    public function getLongitude()
-    {
-        return $this->longitude;
-    }
+	/**
+	 * Returns the longitude
+	 *
+	 * @return float $longitude
+	 */
+	public function getLongitude()
+	{
+		return $this->longitude;
+	}
 
-    /**
-     * Sets the longitude
-     *
-     * @param float $longitude
-     * @return void
-     */
-    public function setLongitude($longitude)
-    {
-        $this->longitude = $longitude;
-    }
+	/**
+	 * Sets the longitude
+	 *
+	 * @param float $longitude
+	 * @return void
+	 */
+	public function setLongitude($longitude)
+	{
+		$this->longitude = $longitude;
+	}
 }

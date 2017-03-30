@@ -1,312 +1,539 @@
 {
-    "modules": [
-        {
-            "config": {
-                "position": [
-                    507,
-                    330
-                ]
-            },
-            "name": "New Model Object",
-            "value": {
-                "actionGroup": {
-                    "_default0_list": false,
-                    "_default1_show": false,
-                    "_default2_new_create": false,
-                    "_default3_edit_update": false,
-                    "_default4_delete": false,
-                    "customActions": []
-                },
-                "name": "Marker",
-                "objectsettings": {
-                    "addDeletedField": true,
-                    "addHiddenField": true,
-                    "addStarttimeEndtimeFields": true,
-                    "aggregateRoot": false,
-                    "categorizable": false,
-                    "description": "",
-                    "mapToTable": "",
-                    "parentClass": "",
-                    "sorting": false,
-                    "type": "Entity",
-                    "uid": "81170886264"
-                },
-                "propertyGroup": {
-                    "properties": [
-                        {
-                            "allowedFileTypes": "",
-                            "maxItems": "1",
-                            "propertyDescription": "",
-                            "propertyIsExcludeField": true,
-                            "propertyIsRequired": true,
-                            "propertyName": "title",
-                            "propertyType": "String",
-                            "uid": "1134954762944"
-                        },
-                        {
-                            "allowedFileTypes": "",
-                            "maxItems": "1",
-                            "propertyDescription": "",
-                            "propertyIsExcludeField": true,
-                            "propertyIsRequired": false,
-                            "propertyName": "bodytext",
-                            "propertyType": "RichText",
-                            "uid": "1045734158571"
-                        },
-                        {
-                            "allowedFileTypes": "",
-                            "maxItems": "1",
-                            "propertyDescription": "",
-                            "propertyIsExcludeField": true,
-                            "propertyIsRequired": false,
-                            "propertyName": "icon",
-                            "propertyType": "Image",
-                            "uid": "1211740819803"
-                        }
-                    ]
-                },
-                "relationGroup": {
-                    "relations": [
-                        {
-                            "foreignRelationClass": "",
-                            "lazyLoading": false,
-                            "propertyIsExcludeField": true,
-                            "relationDescription": "",
-                            "relationName": "position",
-                            "relationType": "manyToOne",
-                            "relationWire": "[wired]",
-                            "renderType": "selectSingle",
-                            "uid": "1039500392191"
-                        }
-                    ]
-                }
-            }
-        },
-        {
-            "config": {
-                "position": [
-                    582,
-                    131
-                ]
-            },
-            "name": "New Model Object",
-            "value": {
-                "actionGroup": {
-                    "_default0_list": false,
-                    "_default1_show": true,
-                    "_default2_new_create": false,
-                    "_default3_edit_update": false,
-                    "_default4_delete": false,
-                    "customActions": []
-                },
-                "name": "Map",
-                "objectsettings": {
-                    "addDeletedField": true,
-                    "addHiddenField": true,
-                    "addStarttimeEndtimeFields": true,
-                    "aggregateRoot": true,
-                    "categorizable": false,
-                    "description": "",
-                    "mapToTable": "",
-                    "parentClass": "",
-                    "sorting": false,
-                    "type": "Entity",
-                    "uid": "1285171790906"
-                },
-                "propertyGroup": {
-                    "properties": [
-                        {
-                            "allowedFileTypes": "",
-                            "maxItems": "1",
-                            "propertyDescription": "",
-                            "propertyIsExcludeField": true,
-                            "propertyIsRequired": true,
-                            "propertyName": "name",
-                            "propertyType": "String",
-                            "uid": "808230856451"
-                        },
-                        {
-                            "allowedFileTypes": "",
-                            "maxItems": "1",
-                            "propertyDescription": "",
-                            "propertyIsExcludeField": true,
-                            "propertyIsRequired": false,
-                            "propertyName": "zoom",
-                            "propertyType": "Integer",
-                            "uid": "326107225843"
-                        }
-                    ]
-                },
-                "relationGroup": {
-                    "relations": [
-                        {
-                            "foreignRelationClass": "",
-                            "lazyLoading": false,
-                            "propertyIsExcludeField": true,
-                            "relationDescription": "",
-                            "relationName": "center",
-                            "relationType": "manyToOne",
-                            "relationWire": "[wired]",
-                            "renderType": "selectSingle",
-                            "uid": "420498774253"
-                        },
-                        {
-                            "foreignRelationClass": "",
-                            "lazyLoading": false,
-                            "propertyIsExcludeField": true,
-                            "relationDescription": "",
-                            "relationName": "markers",
-                            "relationType": "zeroToMany",
-                            "relationWire": "[wired]",
-                            "renderType": "inline",
-                            "uid": "746481197094"
-                        }
-                    ]
-                }
-            }
-        },
-        {
-            "config": {
-                "position": [
-                    428,
-                    510
-                ]
-            },
-            "name": "New Model Object",
-            "value": {
-                "actionGroup": {
-                    "_default0_list": false,
-                    "_default1_show": false,
-                    "_default2_new_create": false,
-                    "_default3_edit_update": false,
-                    "_default4_delete": false,
-                    "customActions": []
-                },
-                "name": "Coordinate",
-                "objectsettings": {
-                    "addDeletedField": true,
-                    "addHiddenField": true,
-                    "addStarttimeEndtimeFields": true,
-                    "aggregateRoot": false,
-                    "categorizable": false,
-                    "description": "",
-                    "mapToTable": "",
-                    "parentClass": "",
-                    "sorting": false,
-                    "type": "Entity",
-                    "uid": "64270215354"
-                },
-                "propertyGroup": {
-                    "properties": [
-                        {
-                            "allowedFileTypes": "",
-                            "maxItems": "1",
-                            "propertyDescription": "Latitude of coordinate",
-                            "propertyIsExcludeField": true,
-                            "propertyIsRequired": true,
-                            "propertyName": "latitude",
-                            "propertyType": "Float",
-                            "uid": "1198856553025"
-                        },
-                        {
-                            "allowedFileTypes": "",
-                            "maxItems": "1",
-                            "propertyDescription": "Longitude of coordinate",
-                            "propertyIsExcludeField": true,
-                            "propertyIsRequired": true,
-                            "propertyName": "longitude",
-                            "propertyType": "Float",
-                            "uid": "1238274257739"
-                        }
-                    ]
-                },
-                "relationGroup": {
-                    "relations": []
-                }
-            }
-        }
-    ],
-    "properties": {
-        "backendModules": [],
-        "description": "Embeds a google map via Maps API",
-        "emConf": {
-            "category": "plugin",
-            "custom_category": "",
-            "dependsOn": "typo3 => 8.6.0-8.6.99\n",
-            "disableLocalization": false,
-            "disableVersioning": false,
-            "skipGenerateDocumentationTemplate": false,
-            "sourceLanguage": "en",
-            "state": "stable",
-            "targetVersion": "8.6.0-8.6.99",
-            "version": "1.0.0"
-        },
-        "extensionKey": "sd_googlemaps",
-        "name": "Google Maps",
-        "originalExtensionKey": "sd_googlemaps",
-        "originalVendorName": "SD",
-        "persons": [
-            {
-                "company": "",
-                "email": "david.schneiderbauer@dschneiderbauer.me",
-                "name": "David Schneiderbauer",
-                "role": "Product Manager"
-            }
-        ],
-        "plugins": [
-            {
-                "actions": {
-                    "controllerActionCombinations": "Map => show",
-                    "noncacheableActions": "",
-                    "switchableActions": ""
-                },
-                "key": "gm",
-                "name": "Google Maps"
-            }
-        ],
-        "vendorName": "SD"
-    },
-    "wires": [
-        {
-            "src": {
-                "moduleId": 1,
-                "terminal": "relationWire_0",
-                "uid": "420498774253"
-            },
-            "tgt": {
-                "moduleId": 2,
-                "terminal": "SOURCES",
-                "uid": "64270215354"
-            }
-        },
-        {
-            "src": {
-                "moduleId": 0,
-                "terminal": "relationWire_0",
-                "uid": "1039500392191"
-            },
-            "tgt": {
-                "moduleId": 2,
-                "terminal": "SOURCES",
-                "uid": "64270215354"
-            }
-        },
-        {
-            "src": {
-                "moduleId": 1,
-                "terminal": "relationWire_1",
-                "uid": "746481197094"
-            },
-            "tgt": {
-                "moduleId": 0,
-                "terminal": "SOURCES",
-                "uid": "81170886264"
-            }
-        }
-    ],
-    "log": {
-        "last_modified": "2017-03-29 01:17",
-        "extension_builder_version": "8.6.0",
-        "be_user": " (1)"
-    }
+	"modules": [
+		{
+			"config": {
+				"position": [
+					386,
+					446
+				]
+			},
+			"name": "New Model Object",
+			"value": {
+				"actionGroup": {
+					"_default0_list": false,
+					"_default1_show": false,
+					"_default2_new_create": false,
+					"_default3_edit_update": false,
+					"_default4_delete": false,
+					"customActions": []
+				},
+				"name": "Marker",
+				"objectsettings": {
+					"addDeletedField": true,
+					"addHiddenField": true,
+					"addStarttimeEndtimeFields": true,
+					"aggregateRoot": false,
+					"categorizable": false,
+					"description": "",
+					"mapToTable": "",
+					"parentClass": "",
+					"sorting": false,
+					"type": "Entity",
+					"uid": "81170886264"
+				},
+				"propertyGroup": {
+					"properties": [
+						{
+							"allowedFileTypes": "",
+							"maxItems": "1",
+							"propertyDescription": "",
+							"propertyIsExcludeField": true,
+							"propertyIsRequired": true,
+							"propertyName": "title",
+							"propertyType": "String",
+							"uid": "1134954762944"
+						},
+						{
+							"allowedFileTypes": "",
+							"maxItems": "1",
+							"propertyDescription": "",
+							"propertyIsExcludeField": true,
+							"propertyIsRequired": false,
+							"propertyName": "bodytext",
+							"propertyType": "RichText",
+							"uid": "1045734158571"
+						},
+						{
+							"allowedFileTypes": "",
+							"maxItems": "1",
+							"propertyDescription": "",
+							"propertyIsExcludeField": true,
+							"propertyIsRequired": false,
+							"propertyName": "icon",
+							"propertyType": "Image",
+							"uid": "1211740819803"
+						}
+					]
+				},
+				"relationGroup": {
+					"relations": [
+						{
+							"foreignRelationClass": "",
+							"lazyLoading": false,
+							"propertyIsExcludeField": true,
+							"relationDescription": "",
+							"relationName": "position",
+							"relationType": "manyToOne",
+							"relationWire": "[wired]",
+							"renderType": "selectSingle",
+							"uid": "1039500392191"
+						}
+					]
+				}
+			}
+		},
+		{
+			"config": {
+				"position": [
+					715,
+					36
+				]
+			},
+			"name": "New Model Object",
+			"value": {
+				"actionGroup": {
+					"_default0_list": false,
+					"_default1_show": true,
+					"_default2_new_create": false,
+					"_default3_edit_update": false,
+					"_default4_delete": false,
+					"customActions": []
+				},
+				"name": "Map",
+				"objectsettings": {
+					"addDeletedField": true,
+					"addHiddenField": true,
+					"addStarttimeEndtimeFields": true,
+					"aggregateRoot": true,
+					"categorizable": false,
+					"description": "",
+					"mapToTable": "",
+					"parentClass": "",
+					"sorting": false,
+					"type": "Entity",
+					"uid": "1285171790906"
+				},
+				"propertyGroup": {
+					"properties": [
+						{
+							"allowedFileTypes": "",
+							"maxItems": "1",
+							"propertyDescription": "",
+							"propertyIsExcludeField": true,
+							"propertyIsRequired": true,
+							"propertyName": "name",
+							"propertyType": "String",
+							"uid": "808230856451"
+						},
+						{
+							"allowedFileTypes": "",
+							"maxItems": "1",
+							"propertyDescription": "",
+							"propertyIsExcludeField": true,
+							"propertyIsRequired": false,
+							"propertyName": "zoom",
+							"propertyType": "Integer",
+							"uid": "326107225843"
+						},
+						{
+							"allowedFileTypes": "",
+							"maxItems": "1",
+							"propertyDescription": "",
+							"propertyIsExcludeField": true,
+							"propertyIsRequired": true,
+							"propertyName": "mapType",
+							"propertyType": "String",
+							"uid": "1435127525221"
+						},
+						{
+							"allowedFileTypes": "",
+							"maxItems": "1",
+							"propertyDescription": "",
+							"propertyIsExcludeField": true,
+							"propertyIsRequired": false,
+							"propertyName": "disableDoubleClickZoom",
+							"propertyType": "Boolean",
+							"uid": "1141638875610"
+						},
+						{
+							"allowedFileTypes": "",
+							"maxItems": "1",
+							"propertyDescription": "",
+							"propertyIsExcludeField": true,
+							"propertyIsRequired": false,
+							"propertyName": "draggable",
+							"propertyType": "Boolean",
+							"uid": "981459427988"
+						},
+						{
+							"allowedFileTypes": "",
+							"maxItems": "1",
+							"propertyDescription": "",
+							"propertyIsExcludeField": true,
+							"propertyIsRequired": false,
+							"propertyName": "scrollwheel",
+							"propertyType": "Boolean",
+							"uid": "358613859279"
+						},
+						{
+							"allowedFileTypes": "",
+							"maxItems": "1",
+							"propertyDescription": "",
+							"propertyIsExcludeField": true,
+							"propertyIsRequired": false,
+							"propertyName": "streetViewControl",
+							"propertyType": "Boolean",
+							"uid": "627902258710"
+						}
+					]
+				},
+				"relationGroup": {
+					"relations": [
+						{
+							"foreignRelationClass": "",
+							"lazyLoading": false,
+							"propertyIsExcludeField": true,
+							"relationDescription": "",
+							"relationName": "center",
+							"relationType": "manyToOne",
+							"relationWire": "[wired]",
+							"renderType": "selectSingle",
+							"uid": "420498774253"
+						},
+						{
+							"foreignRelationClass": "",
+							"lazyLoading": false,
+							"propertyIsExcludeField": true,
+							"relationDescription": "",
+							"relationName": "markers",
+							"relationType": "manyToMany",
+							"relationWire": "[wired]",
+							"renderType": "selectMultipleSideBySide",
+							"uid": "746481197094"
+						},
+						{
+							"foreignRelationClass": "",
+							"lazyLoading": false,
+							"propertyIsExcludeField": true,
+							"relationDescription": "",
+							"relationName": "styles",
+							"relationType": "manyToMany",
+							"relationWire": "[wired]",
+							"renderType": "selectMultipleSideBySide",
+							"uid": "417792842140"
+						}
+					]
+				}
+			}
+		},
+		{
+			"config": {
+				"position": [
+					148,
+					637
+				]
+			},
+			"name": "New Model Object",
+			"value": {
+				"actionGroup": {
+					"_default0_list": false,
+					"_default1_show": false,
+					"_default2_new_create": false,
+					"_default3_edit_update": false,
+					"_default4_delete": false,
+					"customActions": []
+				},
+				"name": "Coordinate",
+				"objectsettings": {
+					"addDeletedField": true,
+					"addHiddenField": true,
+					"addStarttimeEndtimeFields": true,
+					"aggregateRoot": false,
+					"categorizable": false,
+					"description": "",
+					"mapToTable": "",
+					"parentClass": "",
+					"sorting": false,
+					"type": "Entity",
+					"uid": "64270215354"
+				},
+				"propertyGroup": {
+					"properties": [
+						{
+							"allowedFileTypes": "",
+							"maxItems": "1",
+							"propertyDescription": "Latitude of coordinate",
+							"propertyIsExcludeField": true,
+							"propertyIsRequired": true,
+							"propertyName": "latitude",
+							"propertyType": "Float",
+							"uid": "1198856553025"
+						},
+						{
+							"allowedFileTypes": "",
+							"maxItems": "1",
+							"propertyDescription": "Longitude of coordinate",
+							"propertyIsExcludeField": true,
+							"propertyIsRequired": true,
+							"propertyName": "longitude",
+							"propertyType": "Float",
+							"uid": "1238274257739"
+						}
+					]
+				},
+				"relationGroup": {
+					"relations": []
+				}
+			}
+		},
+		{
+			"config": {
+				"position": [
+					669,
+					261
+				]
+			},
+			"name": "New Model Object",
+			"value": {
+				"actionGroup": {
+					"_default0_list": false,
+					"_default1_show": false,
+					"_default2_new_create": false,
+					"_default3_edit_update": false,
+					"_default4_delete": false,
+					"customActions": []
+				},
+				"name": "Style",
+				"objectsettings": {
+					"addDeletedField": true,
+					"addHiddenField": true,
+					"addStarttimeEndtimeFields": true,
+					"aggregateRoot": false,
+					"categorizable": false,
+					"description": "",
+					"mapToTable": "",
+					"parentClass": "",
+					"sorting": false,
+					"type": "Entity",
+					"uid": "226188246571"
+				},
+				"propertyGroup": {
+					"properties": [
+						{
+							"allowedFileTypes": "",
+							"maxItems": "1",
+							"propertyDescription": "",
+							"propertyIsExcludeField": true,
+							"propertyIsRequired": true,
+							"propertyName": "featureType",
+							"propertyType": "String",
+							"uid": "1136285438962"
+						},
+						{
+							"allowedFileTypes": "",
+							"maxItems": "1",
+							"propertyDescription": "",
+							"propertyIsExcludeField": true,
+							"propertyIsRequired": false,
+							"propertyName": "elementType",
+							"propertyType": "String",
+							"uid": "974279513977"
+						}
+					]
+				},
+				"relationGroup": {
+					"relations": [
+						{
+							"foreignRelationClass": "",
+							"lazyLoading": false,
+							"propertyIsExcludeField": true,
+							"relationDescription": "",
+							"relationName": "stylers",
+							"relationType": "manyToMany",
+							"relationWire": "[wired]",
+							"renderType": "selectMultipleSideBySide",
+							"uid": "582347086933"
+						}
+					]
+				}
+			}
+		},
+		{
+			"config": {
+				"position": [
+					618,
+					445
+				]
+			},
+			"name": "New Model Object",
+			"value": {
+				"actionGroup": {
+					"_default0_list": false,
+					"_default1_show": false,
+					"_default2_new_create": false,
+					"_default3_edit_update": false,
+					"_default4_delete": false,
+					"customActions": []
+				},
+				"name": "Styler",
+				"objectsettings": {
+					"addDeletedField": true,
+					"addHiddenField": true,
+					"addStarttimeEndtimeFields": true,
+					"aggregateRoot": false,
+					"categorizable": false,
+					"description": "",
+					"mapToTable": "",
+					"parentClass": "",
+					"sorting": false,
+					"type": "Entity",
+					"uid": "1328008973068"
+				},
+				"propertyGroup": {
+					"properties": [
+						{
+							"allowedFileTypes": "",
+							"maxItems": "1",
+							"propertyDescription": "",
+							"propertyIsExcludeField": true,
+							"propertyIsRequired": true,
+							"propertyName": "styleOption",
+							"propertyType": "String",
+							"uid": "622931782175"
+						},
+						{
+							"allowedFileTypes": "",
+							"maxItems": "1",
+							"propertyDescription": "",
+							"propertyIsExcludeField": true,
+							"propertyIsRequired": true,
+							"propertyName": "stringValue",
+							"propertyType": "String",
+							"uid": "1320291747012"
+						},
+						{
+							"allowedFileTypes": "",
+							"maxItems": "1",
+							"propertyDescription": "",
+							"propertyIsExcludeField": true,
+							"propertyIsRequired": true,
+							"propertyName": "intValue",
+							"propertyType": "Integer",
+							"uid": "717873905539"
+						}
+					]
+				},
+				"relationGroup": {
+					"relations": []
+				}
+			}
+		}
+	],
+	"properties": {
+		"backendModules": [],
+		"description": "Embeds a google map via Maps API",
+		"emConf": {
+			"category": "plugin",
+			"custom_category": "",
+			"dependsOn": "typo3 => 8.6.0-8.6.99\n",
+			"disableLocalization": false,
+			"disableVersioning": false,
+			"skipGenerateDocumentationTemplate": false,
+			"sourceLanguage": "en",
+			"state": "stable",
+			"targetVersion": "8.6.0-8.6.99",
+			"version": "1.0.0"
+		},
+		"extensionKey": "sd_googlemaps",
+		"name": "Google Maps",
+		"originalExtensionKey": "sd_googlemaps",
+		"originalVendorName": "SD",
+		"persons": [
+			{
+				"company": "",
+				"email": "david.schneiderbauer@dschneiderbauer.me",
+				"name": "David Schneiderbauer",
+				"role": "Product Manager"
+			}
+		],
+		"plugins": [
+			{
+				"actions": {
+					"controllerActionCombinations": "Map => show",
+					"noncacheableActions": "",
+					"switchableActions": ""
+				},
+				"key": "gm",
+				"name": "Google Maps"
+			}
+		],
+		"vendorName": "SD"
+	},
+	"wires": [
+		{
+			"src": {
+				"moduleId": 1,
+				"terminal": "relationWire_0",
+				"uid": "420498774253"
+			},
+			"tgt": {
+				"moduleId": 2,
+				"terminal": "SOURCES",
+				"uid": "64270215354"
+			}
+		},
+		{
+			"src": {
+				"moduleId": 0,
+				"terminal": "relationWire_0",
+				"uid": "1039500392191"
+			},
+			"tgt": {
+				"moduleId": 2,
+				"terminal": "SOURCES",
+				"uid": "64270215354"
+			}
+		},
+		{
+			"src": {
+				"moduleId": 1,
+				"terminal": "relationWire_1",
+				"uid": "746481197094"
+			},
+			"tgt": {
+				"moduleId": 0,
+				"terminal": "SOURCES",
+				"uid": "81170886264"
+			}
+		},
+		{
+			"src": {
+				"moduleId": 1,
+				"terminal": "relationWire_2",
+				"uid": "417792842140"
+			},
+			"tgt": {
+				"moduleId": 3,
+				"terminal": "SOURCES",
+				"uid": "226188246571"
+			}
+		},
+		{
+			"src": {
+				"moduleId": 3,
+				"terminal": "relationWire_0",
+				"uid": "582347086933"
+			},
+			"tgt": {
+				"moduleId": 4,
+				"terminal": "SOURCES",
+				"uid": "1328008973068"
+			}
+		}
+	],
+	"log": {
+		"last_modified": "2017-03-29 05:04",
+		"extension_builder_version": "8.6.0",
+		"be_user": " (1)"
+	}
 }

@@ -1,0 +1,2 @@
+#cat=basic/enable/a; type=boolean; label=LLL:EXT:sd_googlemaps/Resources/Private/Language/locallang_be.xlf:config.enable_styling
+enableStyling = 0
