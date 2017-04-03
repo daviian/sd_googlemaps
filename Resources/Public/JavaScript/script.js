@@ -1,8 +1,6 @@
-var map;
-
 function initMap() {
 	// Create the map with given options
-	map = new google.maps.Map(document.getElementById('map'), sdGooglemaps.options);
+	var map = new google.maps.Map(document.getElementById('map'), sdGooglemaps.options);
 
 	// Calculate bounds to fit all markers into viewport
 	if (sdGooglemaps.options.center === null) {

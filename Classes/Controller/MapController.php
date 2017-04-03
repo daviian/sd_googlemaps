@@ -87,8 +87,15 @@ class MapController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
 	 * @param array $stylesToMerge
 	 * @return array
 	 */
-	protected function mergeStyles(array $stylesBase, array $stylesToMerge)
+	protected function mergeStyles(array $stylesBase = NULL, array $stylesToMerge = NULL)
 	{
+		if ($stylesBase === NULL) {
+			return $stylesToMerge;
+		}
+		if ($stylesToMerge === NULL) {
+			return $stylesBase;
+		}
+
 		foreach ($stylesToMerge as $style) {
 			$merged = false;
 			foreach ($stylesBase as $key => $baseStyle) {

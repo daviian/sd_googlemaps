@@ -17,5 +17,16 @@ plugin.tx_sdgooglemaps_gm {
 		apiKey =
 		# cat=plugin.tx_sdgooglemaps_gm//b; type=string; label=LLL:EXT:sd_googlemaps/Resources/Private/Language/locallang_be.xlf:constants.library
 		googleMapsLibrary = //maps.googleapis.com/maps/api/js
+
+		backend {
+			center {
+				# cat=plugin.tx_sdgooglemaps_gm//a; type=int; label=LLL:EXT:sd_googlemaps/Resources/Private/Language/locallang_be.xlf:constants.center_latitude
+				lat =
+				# cat=plugin.tx_sdgooglemaps_gm//a; type=int; label=LLL:EXT:sd_googlemaps/Resources/Private/Language/locallang_be.xlf:constants.center_longitude
+				lng =
+			}
+			# cat=plugin.tx_sdgooglemaps_gm//a; type=int; label=LLL:EXT:sd_googlemaps/Resources/Private/Language/locallang_be.xlf:constants.zoom
+			zoom =
+		}
 	}
 }

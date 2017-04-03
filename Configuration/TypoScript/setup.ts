@@ -25,5 +25,13 @@ plugin.tx_sdgooglemaps_gm {
 	settings {
 		apiKey = {$plugin.tx_sdgooglemaps_gm.settings.apiKey}
 		googleMapsLibrary = {$plugin.tx_sdgooglemaps_gm.settings.googleMapsLibrary}
+
+		backend {
+			center {
+				lat = {$plugin.tx_sdgooglemaps_gm.settings.backend.center.lat}
+				lng = {$plugin.tx_sdgooglemaps_gm.settings.backend.center.lng}
+			}
+			zoom = {$plugin.tx_sdgooglemaps_gm.settings.backend.zoom}
+		}
 	}
 }

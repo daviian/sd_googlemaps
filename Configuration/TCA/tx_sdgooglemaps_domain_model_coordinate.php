@@ -25,7 +25,13 @@ return [
 		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, latitude, longitude',
 	],
 	'types' => [
-		'1' => ['showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, latitude, longitude, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime'],
+		'1' => ['showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, position_picker, --palette;LLL:EXT:frontend/Resources/Private/Language/locallang_be.xlf:palette.coordinates;coordinates, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime'],
+	],
+	'palettes' => [
+		'coordinates' => [
+			'showitem' => 'latitude, longitude',
+			'isHiddenPalette' => true
+		]
 	],
 	'columns' => [
 		'sys_language_uid' => [
@@ -116,6 +122,14 @@ return [
 			],
 		],
 
+		'position_picker' => [
+			'label' => 'LLL:EXDT:sd_googlemaps/Resources/Private/Language/locallang_db.xlf:tx_sdgooglemaps_domain_model_coordinate.position_picker',
+			'config' => [
+				'type' => 'input',
+				'size' => 30,
+				'renderType' => 'positionPicker'
+			]
+		],
 		'latitude' => [
 			'exclude' => true,
 			'label' => 'LLL:EXT:sd_googlemaps/Resources/Private/Language/locallang_db.xlf:tx_sdgooglemaps_domain_model_coordinate.latitude',

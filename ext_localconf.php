@@ -37,6 +37,7 @@ call_user_func(
 			}'
 		);
 
+		// Register dataprovider for initial setup for TCA with extension manager configuration
 		$GLOBALS['TYPO3_CONF_VARS']['SYS']['formEngine']['formDataGroup']['tcaDatabaseRecord'][\SD\SdGooglemaps\Backend\FormDataProvider\MapRowInitialize::class] = [
 			'depends' => [
 				\TYPO3\CMS\Backend\Form\FormDataProvider\InitializeProcessedTca::class,
@@ -44,6 +45,13 @@ call_user_func(
 			'before' => [
 				\TYPO3\CMS\Backend\Form\FormDataProvider\TcaColumnsProcessShowitem::class,
 			]
+		];
+
+		// Register positionPicker renderType
+		$GLOBALS['TYPO3_CONF_VARS']['SYS']['formEngine']['nodeRegistry'][1491201013] = [
+			'nodeName' => 'positionPicker',
+			'priority' => 70,
+			'class' => \SD\SdGooglemaps\Form\Element\PositionPickerElement::class
 		];
 
 	}
