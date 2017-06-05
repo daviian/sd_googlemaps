@@ -1,6 +1,9 @@
 <?php
 namespace SD\SdGooglemaps\Domain\Model;
 
+use TYPO3\CMS\Core\Utility\GeneralUtility;
+use TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer;
+
 /***
  *
  * This file is part of the "Google Maps" Extension for TYPO3 CMS.
@@ -52,9 +55,11 @@ class Marker extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity implements \
 	 */
 	public function jsonSerialize()
 	{
+		$contentObject = GeneralUtility::makeInstance(ContentObjectRenderer::class);
+
 		return [
 			'title' => $this->title,
-			'bodytext' => $this->bodytext,
+			'bodytext' => $contentObject->parseFunc($this->bodytext, [], '< lib.parseFunc_RTE'),
 			'icon' => $this->icon ? $this->icon->getPublicUrl() : '',
 			'position' => $this->position
 		];
